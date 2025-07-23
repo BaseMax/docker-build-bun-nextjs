@@ -1,4 +1,4 @@
-FROM oven/bun:alpine AS builder
+FROM docker.arvancloud.ir/oven/bun:alpine AS builder
 
 ARG UID=0
 ARG GID=0
@@ -20,7 +20,7 @@ COPY . .
 
 RUN bun run build
 
-FROM oven/bun:alpine
+FROM docker.arvancloud.ir/oven/bun:alpine
 
 ARG UID=0
 ARG GID=0
